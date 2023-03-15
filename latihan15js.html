@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat Perhitungan</title>
+</head>
+<body>
+ <h2 align ="center"><u>Perhitungan Angka</u></h2>
+ <table align = "center" border="1" cellpadding="10" cellspasing="0" width="75%">
+     <tbody>
+        <form id="perhitungan">
+        <tr>
+            <td bgcolor="blue">
+                Angka 1 :<input type="text" name="angka" placeholder="Masukan angka pertama">
+            </td>
+        </tr>
+            <br>
+            <br>
+           <tr>
+               <td bgcolor="green">
+                Angka 2 :
+                <input type="text" name="angka2" placeholder="Masukan angka kedua">
+               </td>
+           </tr> 
+            <br>
+            <br>
+            <tr>
+                <td bgcolor="red">
+                    Hasil : 
+                    <input type="text" name="hasil" value="" disabled>
+                </td>
+            </tr>  
+            <br>
+            <br>
+            <tr>
+                <td bgcolor="yellow">
+                    <button type="button" name="btn_tambah" onclick="tambah()">+</button>
+                    <button type="button" name="btn_tambah" onclick="kurang()">-</button>
+                    <button type="button" name="btn_tambah" onclick="pembagian()">/</button>
+                    <button type="button" name="btn_tambah" onclick="perkalian()">*</button>
+                    <button type="button" name="btn_tambah" onclick="pangkat()">**</button>
+                </td>
+            </tr>
+        </form>
+     </tbody> 
+   </table>
+    <script>
+        function perhitungan(){
+            let perhitungan = document.getElementById('frm').nama.value;
+            let input = '';
+            let no_input = 'Maaf angka belum terisi';
+            let hasil = (perhitungan != '') ? input : no_input;
+            document.getElementById('hasil').innerHTML = hasil;
+        }
+    </script>
+</body>
+</html>
